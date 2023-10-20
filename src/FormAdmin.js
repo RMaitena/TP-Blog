@@ -1,12 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function FormAdmin() {
   const [usuario, setUsuario] = useState('');
   const [contra, setContra] = useState('');
+  const [enviado, setEnviado] = useState(false);
 
-   const handleSubmit = (event) => {
-     event.preventDefault();
-   };
+   useEffect(() => {
+    if (enviado) {
+      localStorage.setItem('usuario', usuario);
+      localStorage.setItem('contra', contra);
+    }
+  }, [enviado, usuario,contra]);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setEnviado(true)
+  }; 
+  
 
   return (
     <form onSubmit={handleSubmit}>

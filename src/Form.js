@@ -41,7 +41,7 @@ export default function Form() {
         <>
           <p>Nombre: {localStorage.getItem('nombre')}</p>
           <p>Titulo: {localStorage.getItem('titulo')}</p>
-          <p>Post: {localStorage.getItem('post')}</p>
+          <p>Post:   {localStorage.getItem('post')}</p>
         </>
       )}
     </form>
