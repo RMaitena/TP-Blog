@@ -1,13 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Form() {
   const [nombre, setNombre] = useState('');
   const [titulo, setTitulo] = useState('');
   const [post, setPost] = useState('');
+  const [enviado, setEnviado] = useState(false);
 
-   const handleSubmit = (event) => {
-     event.preventDefault();
-   };
+  useEffect(() => {
+    if (enviado) {
+      localStorage.setItem('nombre', nombre);
+      localStorage.setItem('titulo', titulo);
+      localStorage.setItem('post', post);
+    }
+  }, [enviado, nombre, titulo, post]);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setEnviado(true);
+  };
 
   return (
     <form onSubmit={handleSubmit} className='formulario'>
@@ -27,6 +37,15 @@ export default function Form() {
       </label>
       <br />
       <button className="envioNP" type="submit">Subir</button>
+      {enviado && (
+        <>
+          <p>Nombre: {localStorage.getItem('nombre')}</p>
+          <p>Titulo: {localStorage.getItem('titulo')}</p>
+          <p>Post: {localStorage.getItem('post')}</p>
+        </>
+      )}
     </form>
   );
 }
+
+
