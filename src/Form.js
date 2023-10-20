@@ -10,8 +10,8 @@ export default function Form() {
    };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
+    <form onSubmit={handleSubmit} className='formulario'>
+      <label className='user'>
         Usuario:
         <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} />
       </label>
@@ -21,7 +21,7 @@ export default function Form() {
         <input type="text" value={titulo} onChange={(e) => setTitulo(e.target.value)} />
       </label>
       <br />
-      <label>
+      <label className='pst'>
         Post:
         <textarea value={post} onChange={(e) => setPost(e.target.value)} />
       </label>

@@ -17,7 +17,7 @@ export default function FormAdmin() {
       <br />
       <label>
         Contraseña:
-        <input type="text" value={contra} onChange={(e) => setContra(e.target.value)} />
+        <input type="password" value={contra} onChange={(e) => setContra(e.target.value)} />
       </label>
       <br />
       <button className="envioNP" type="submit">Subir</button>

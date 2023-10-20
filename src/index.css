@@ -33,37 +33,17 @@ body {
   box-shadow: 5px 5px 5px 5px;
   }
 
-.navegador{
-  background-color: #ec0f34;
-  display: left;
-  height: 25px;
-  color:black;
-  padding:10px;
-  }
-
 hr {
   color: black;
   background-color: black;
   height: 2px;
   }
 
-button {
-  font-size: 16px;
-  height: 25px;
-  float: center;
-  background-color: #ec0f34;
-  color: black;
-  border: 1px solid pink;
-  border-radius: 5px;
-  list-style-type: none;
-  text-decoration: underline;
-  cursor: pointer;
-}
 
 .envioNP{
-  background-color: pink;
+  background-color: rgb(252, 151, 168);
   color: black;
-  border: 1px solid white;
+  border: 1px solid rgb(236, 53, 83);
   text-decoration: underline;
   cursor: pointer;
 }
@@ -71,7 +51,6 @@ button {
 form {
   text-align: center;
 }
-
 p{
   margin: 50px;
 }
@@ -83,3 +62,68 @@ h2{
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   "Lucida Sans", Arial, sans-serif;
 }
+
+.navegador{
+  background-color: rgb(244, 95, 120);
+  height: 60px;
+  display: right;
+  height: 47px;
+}
+ 
+  ul{
+    float: right;
+    list-style-type: none;
+    align-items: center;
+    font-size: 17px;
+    margin-top: 10px;
+    }
+
+
+    li{
+    display: inline;
+    margin: 3px;
+    font-size: 15px;
+    }
+   
+    button {
+      font-size: 16px;
+      height: 25px;
+      float: center;
+      background-color: #fe899c;
+      color: black;
+      border: 1px solid rgb(250, 133, 150);
+      border-radius: 5px;
+      list-style-type: none;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+ 
+
+    label {
+      color: black;
+	  	display: inline-block;
+	  	width: 25%;
+	  	text-align: center;
+	  	margin: 10px
+	}
+
+  .user{
+    margin-left:0px;;
+  }
+
+  .pst{
+
+  }
+
+  textarea{
+    background-color:white;
+  }
+
+  input{
+    width: 55%; 
+    padding: 5px;
+    border-radius: 5px;
+    background: white;
+}
+
+
