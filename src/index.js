@@ -8,6 +8,8 @@ import Home from "./rutas/Home";
 import Admin from "./rutas/Admin";
 import NewPost from "./rutas/NewPost";
 import UnPost from "./rutas/UnPost";
+import SdoPost from "./rutas/SdoPost";
+import TcerPost from "./rutas/TcerPost";
 import Error from "./rutas/Error";
 
 const router = createBrowserRouter([
@@ -28,15 +30,24 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/Post",
+    path: "/UnPost",
     element: <UnPost />
+  },
+
+  {
+    path: "/SdoPost",
+    element: <SdoPost />
+  },
+
+  {
+    path: "/TcerPost",
+    element: <TcerPost />
   }
 ])
 
  const root = ReactDOM.createRoot(document.getElementById('root'));
  root.render(
    <React.StrictMode>
-    {/* App visualiza todo CAMBIE APP A HOME*/}
      {/* <Home /> */}
      <RouterProvider router={router}/>
    </React.StrictMode>
