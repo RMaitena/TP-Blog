@@ -1,0 +1,85 @@
+body {
+  background: pink;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 2px;
+  margin-left:1px;
+  margin-right:1px;
+  margin-bottom:1px;
+  }
+
+.titulo {
+  text-align: center;
+  padding: 20px;
+  font-size: 40px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+  }
+
+.subt {
+  text-align: center;
+  font-family: monospace;
+  font-size: 25px;
+  }
+
+.creadores{
+  text-align: center;
+  font-size: 15px;
+  }
+
+
+.texto {
+  margin: 50px;
+  padding: 15px;
+  box-shadow: 5px 5px 5px 5px;
+  }
+
+.navegador{
+  background-color: #ec0f34;
+  display: left;
+  height: 25px;
+  color:black;
+  padding:10px;
+  }
+
+hr {
+  color: black;
+  background-color: black;
+  height: 2px;
+  }
+
+button {
+  font-size: 16px;
+  height: 25px;
+  float: center;
+  background-color: #ec0f34;
+  color: black;
+  border: 1px solid pink;
+  border-radius: 5px;
+  list-style-type: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.envioNP{
+  background-color: pink;
+  color: black;
+  border: 1px solid white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+form {
+  text-align: center;
+}
+
+p{
+  margin: 50px;
+}
+
+h2{
+  text-align: left;
+  padding: 20px;
+  font-size: 30px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+}
