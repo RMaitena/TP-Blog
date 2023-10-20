@@ -15,6 +15,12 @@ body {
   "Lucida Sans", Arial, sans-serif;
   }
 
+  h3{
+    margin: 20px;
+    margin-bottom: 27px;
+    margin-top:0px,
+  }
+
 .subt {
   text-align: center;
   font-family: monospace;
@@ -29,8 +35,8 @@ body {
 
 .texto {
   margin: 50px;
-  padding: 15px;
-  box-shadow: 5px 5px 5px 5px;
+  padding: 2px;
+  box-shadow: 5px 5px 5px 5px ;
   }
 
 hr {
@@ -38,7 +44,6 @@ hr {
   background-color: black;
   height: 2px;
   }
-
 
 .envioNP{
   background-color: rgb(252, 151, 168);
@@ -52,7 +57,7 @@ form {
   text-align: center;
 }
 p{
-  margin: 50px;
+  margin: 20px;
 }
 
 h2{
@@ -111,10 +116,6 @@ h2{
     margin-left:0px;;
   }
 
-  .pst{
-
-  }
-
   textarea{
     background-color:white;
   }
@@ -126,4 +127,11 @@ h2{
     background: white;
 }
 
-
+.ver
+{
+  color:black;
+  padding:10px;
+  border-radius: 5px;
+  width:  90px;
+  text-align:center;
+}
