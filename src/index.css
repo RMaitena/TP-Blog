@@ -50,7 +50,7 @@ hr {
   display: center;
   background-color: rgb(248, 247, 247);
   color: black;
-  border: 1px solid rgb(236, 53, 83);
+  border: 1px black;
   text-decoration: underline;
   cursor: pointer;
   font-size: 15px;
