@@ -47,15 +47,20 @@ hr {
   }
 
 .envioNP{
-  background-color: rgb(252, 151, 168);
+  display: center;
+  background-color: rgb(248, 247, 247);
   color: black;
   border: 1px solid rgb(236, 53, 83);
   text-decoration: underline;
   cursor: pointer;
+  font-size: 15px;
+  width: 7%;
+  height: 10%;
 }
 
 form {
   text-align: center;
+  display: center;
 }
 p{
   margin: 20px;
@@ -135,4 +140,21 @@ h2{
   border-radius: 5px;
   width:  90px;
   text-align:center;
+}
+
+
+.elform{
+    margin: 50px;
+    margin-left: 23%;
+    margin-right: 23%;
+    padding: 2px;
+    box-shadow: 5px 5px 5px 5px ;
+}
+
+
+.title{
+  margin: 20px;
+  margin-bottom: 27px;
+  margin-top:10x;
+  margin-left:25px;
 }

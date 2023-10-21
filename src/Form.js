@@ -4,48 +4,53 @@ export default function Form() {
   const [nombre, setNombre] = useState('');
   const [titulo, setTitulo] = useState('');
   const [post, setPost] = useState('');
-  const [enviado, setEnviado] = useState(false);
+  const [publis, setPublis] = useState([]);
 
   useEffect(() => {
-    if (enviado) {
-      localStorage.setItem('nombre', nombre);
-      localStorage.setItem('titulo', titulo);
-      localStorage.setItem('post', post);
+    const publiGuardadas = JSON.parse(localStorage.getItem('publis'));
+    if (publiGuardadas) {
+      setPublis(publiGuardadas);
     }
-  }, [enviado, nombre, titulo, post]);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('publis', JSON.stringify(publis));
+  }, [publis]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setEnviado(true);
+    const nuevaPublicacion = { nombre, titulo, post };
+    setPublis([...publis, nuevaPublicacion]);
+    setNombre('');
+    setTitulo('');
+    setPost('');
   };
 
   return (
     <form onSubmit={handleSubmit} className='formulario'>
       <label className='user'>
-        Usuario:
+        Usuario: 
         <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} />
       </label>
       <br />
       <label>
-        Titulo:
+        Titulo: 
         <input type="text" value={titulo} onChange={(e) => setTitulo(e.target.value)} />
       </label>
       <br />
       <label className='pst'>
-        Post:
+        Post: 
         <textarea value={post} onChange={(e) => setPost(e.target.value)} />
       </label>
       <br />
       <button className="envioNP" type="submit">Subir</button>
-      {enviado && (
-        <>
-          <p>Nombre: {localStorage.getItem('nombre')}</p>
-          <p>Titulo: {localStorage.getItem('titulo')}</p>
-          <p>Post:   {localStorage.getItem('post')}</p>
-        </>
-      )}
+      {publis.map((publis, index) => (
+        <div className='elform' key={index}>
+          <h3 className='title'>{publis.titulo}</h3>
+          <p className='elpost'>{publis.post}</p>
+          <p className='elusr'>Por: {publis.nombre}</p>
+        </div>
+      ))}
     </form>
   );
 }
-
-
